@@ -18,27 +18,34 @@
 
 ## Rodando o projeto
 
-#### 1. Clone o repositório
+#### Clone e acesse o repositório
 ```bash
 git clone https://github.com/arthurmousinho/dev-stage.git
 ```
-
-#### 2. Instale as dependências
 ```bash
-npm install
+cd dev-stage
 ```
 
-#### 3. Rode a API
+#### Adicione o arquivo .env na raiz da pasta API e adicione as variáveis de ambiente:
 ```bash
 cd api
 ```
+```python
+PORT=3333
+DATABASE_URL="postgresql://docker:docker@localhost:5432/connect"
+REDIS_URL="redis://localhost:6379"
+API_URL="http://localhost:3333"
+WEB_URL="http://localhost:3000"
+```
+
+#### Rode a API
 ```bash
 npm run dev
 ```
 
-#### 4. Rode o projeto WEB
+#### Rode o projeto WEB
 ```bash
-cd web
+cd ../web
 ```
 ```bash
 npm run dev
